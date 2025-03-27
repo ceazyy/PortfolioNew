@@ -1,764 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Portfolio</title>
-    <meta property="og:title" content="Portfolio" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 300vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+<head>
+  <title>Portfolio</title>
+  <meta property="og:title" content="Portfolio" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background: var(--dl-color-gray-white);
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
 
-        fill: var(--dl-color-gray-black);
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
+    body {
+      margin: 0;
+    }
 
-      <div class="home-container1">
-        <header class="home-navbar">
-          <div class="home-nav-content">
-            <div class="home-nav-links1">
-              <a href="index.html" class="home-link10 nav-link">Home</a>
-              <a href="#Projects" class="home-link11 nav-link">Projects</a>
-              <a href="#Experience" class="home-link12 nav-link">Experience</a>
-              <a href="#FAQ" class="home-link13 nav-link">
-                <span>FAQ</span>
-                <br />
-              </a>
-            </div>
-            <a
-              href="https://drive.google.com/file/d/1xZDZtNPl7lz4dHxKu4SLrX8oWLeNqDBe/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="home-link14"
-            >
-              <div class="home-get-started1 get-started">
-                <span class="home-text12">Resume</span>
-              </div>
-            </a>
-            <div id="open-mobile-menu" class="home-hamburger get-started">
-              <img
-                alt="image"
-                src="public/Icons/pngegg%20(1)-200h.png"
-                class="home-image1"
-              />
-            </div>
-          </div>
-          <div id="mobile-menu" class="home-mobile-menu">
-            <div class="home-branding">
-              <img
-                alt="image"
-                src="public/Branding/planical7012-ttpb.svg"
-                class="home-image2"
-              />
-              <div id="close-mobile-menu" class="home-container2">
-                <svg viewBox="0 0 1024 1024" class="home-icon1">
-                  <path
-                    d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <div class="home-nav-links2">
-              <span class="nav-link">Features</span>
-              <span class="nav-link">Why us</span>
-              <span class="nav-link">Prices</span>
-              <span class="nav-link">Contact</span>
-            </div>
-            <div class="get-started">
-              <span class="home-text13">Get started</span>
-            </div>
-          </div>
-          <div>
-            <div class="home-container4">
-              <script defer="">
-                    /*
-                Mobile menu - Code Embed
-                */
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+      -webkit-font-smoothing: antialiased;
+    }
 
-                /* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app,
-                the mobile menu will still work*/
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
 
-                const listenForUrlChangesMobileMenu = () => {
-                    let url = location.href;
-                    document.body.addEventListener('click', () => {
-                        requestAnimationFrame(() => {
-                            if (url !== location.href) {
-                                runMobileMenuCodeEmbed();
-                                url = location.href;
-                            }
-                        });
-                    },
-                    true
-                    );
-                };
+    button {
+      background-color: transparent;
+    }
 
-                const runMobileMenuCodeEmbed = () => {
-                    // Mobile menu
-                    const mobileMenu = document.querySelector('#mobile-menu')
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
 
-                    // Buttons
-                    const closeButton = document.querySelector('#close-mobile-menu')
-                    const openButton = document.querySelector('#open-mobile-menu')
+    button,
+    select {
+      text-transform: none;
+    }
 
-                    // On openButton click, set the mobileMenu position left to -100vw
-                    openButton && openButton.addEventListener('click', function() {
-                        mobileMenu.style.transform = 'translateX(0%)'
-                    })
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+      color: inherit;
+    }
 
-                    // On closeButton click, set the mobileMenu position to 0vw
-                    closeButton && closeButton.addEventListener('click', function() {
-                        mobileMenu.style.transform = 'translateX(100%)'
-                    })
-                }
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
 
-                runMobileMenuCodeEmbed()
-                listenForUrlChangesMobileMenu()
-              </script>
-            </div>
-          </div>
-        </header>
-        <section id="Home" class="home-section10">
-          <div class="home-hero">
-            <div class="home-content10">
-              <main class="home-main1">
-                <header class="home-header1">
-                  <h1 class="home-heading10">Hi, I'm Nipun Chandra</h1>
-                  <span class="home-caption1">
-                    Machine Learning and Artificial Intelligence Enthusiast
-                    graduated from Netaji Subhas University of Technology
-                    (Delhi) in 2024 with a Degree of Bachelors of Technology in
-                    Computer Science and Engineering with a specialization in
-                    Artificial Intelligence.
-                  </span>
-                </header>
-                <div class="home-buttons">
-                  <a
-                    href="https://www.linkedin.com/in/nipun-chandra-24ba15143/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="home-link19"
-                  >
-                    <div class="home-linked-in button">
-                      <span class="home-text14">LinkedIn</span>
-                    </div>
-                  </a>
-                  <a
-                    href="https://github.com/ceazyy"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="home-link20"
-                  >
-                    <div class="home-git-hub button">
-                      <span class="home-text15">GitHub</span>
-                    </div>
-                  </a>
-                </div>
-              </main>
-            </div>
-          </div>
-        </section>
-        <section id="Projects" class="home-section11">
-          <h2 class="home-text16">
-            <span>My Projects</span>
-            <br />
-          </h2>
-          <div class="home-features">
-            <a href="#GENAI" class="home-link21">
-              <header class="home-feature1 feature feature-active">
-                <h3 class="home-text19">Next Gen Agent</h3>
-                <p class="home-text20">
-                  GPT-3.5 turbo, LLM, API, Python, Flask
-                </p>
-              </header>
-            </a>
-            <a href="#ALHZY" class="home-link22">
-              <header class="home-feature2 feature feature-active">
-                <h3 class="home-text21">Alzheimer’s Detection</h3>
-                <p class="home-text22">
-                  Alzheimer’s, Python, Tensorflow, EfficientNet
-                </p>
-              </header>
-            </a>
-            <a href="#DIA" class="home-link23">
-              <header class="home-feature3 feature feature-active">
-                <h3 class="home-text23">
-                  <span class="home-text24">
-                    Diabetic Retinopathy Detection
-                  </span>
-                  <br />
-                </h3>
-                <p class="home-text26">
-                  Diabetic Retinopathy, Tensorflow, Deep Learning
-                </p>
-              </header>
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    details {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    [data-thq="accordion"] [data-thq="accordion-content"] {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+      padding: 0;
+    }
+
+    [data-thq="accordion"] details[data-thq="accordion-trigger"][open]+[data-thq="accordion-content"] {
+      max-height: 300vh;
+    }
+
+    details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {
+      transform: rotate(180deg);
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background: var(--dl-color-gray-white);
+
+      fill: var(--dl-color-gray-black);
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+</head>
+
+<body>
+  <link rel="stylesheet" href="./style.css" />
+  <div>
+    <link href="./index.css" rel="stylesheet" />
+
+    <div class="home-container1">
+      <header class="home-navbar">
+        <div class="home-nav-content">
+          <div class="home-nav-links1">
+            <a href="index.html" class="home-link10 nav-link">Home</a>
+            <a href="#Projects" class="home-link11 nav-link">Projects</a>
+            <a href="#Experience" class="home-link12 nav-link">Experience</a>
+            <a href="#FAQ" class="home-link13 nav-link">
+              <span>FAQ</span>
+              <br />
             </a>
           </div>
-          <div id="GENAI" class="home-gen-ai">
-            <div class="home-content11">
-              <main class="home-main2">
-                <h2 class="home-heading11">
-                  Revolutionizing Case Management with GenAI and LLMs
-                </h2>
-                <p class="home-paragraph1">
-                  <span>
-                    Manage cases with the NextGen Agent, a solution powered by
-                    GPT-3.5-turbo. This platform integrates five core modules to
-                    deliver automated insights, streamlining customer service
-                    operations and eliminating repetitive manual tasks. With a
-                    sleek Flask-based UI and robust database management using
-                    PostgreSQL, this agent takes case management to the next
-                    level. The AI-driven insights feature ensures efficiency by
-                    automating case updates and delivering structured responses.
-                  </span>
-                  <br />
-                </p>
-              </main>
-              <div class="home-explore-more1">
-                <p class="home-text29">Explore more -&gt;</p>
-              </div>
+          <a href="https://drive.google.com/file/d/1xZDZtNPl7lz4dHxKu4SLrX8oWLeNqDBe/view?usp=sharing" target="_blank"
+            rel="noreferrer noopener" class="home-link14">
+            <div class="home-get-started1 get-started">
+              <span class="home-text12">Resume</span>
             </div>
-            <div class="home-image3">
-              <img
-                alt="image"
-                src="public/SectionImages/image_2025-01-22_191206682-500h.png"
-                class="home-image4"
-              />
+          </a>
+          <div id="open-mobile-menu" class="home-hamburger get-started">
+            <img alt="image" src="public/Icons/pngegg%20(1)-200h.png" class="home-image1" />
+          </div>
+        </div>
+        <div id="mobile-menu" class="home-mobile-menu">
+          <div class="home-branding">
+            <img alt="image" src="public/Branding/planical7012-ttpb.svg" class="home-image2" />
+            <div id="close-mobile-menu" class="home-container2">
+              <svg viewBox="0 0 1024 1024" class="home-icon1">
+                <path
+                  d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z">
+                </path>
+              </svg>
             </div>
           </div>
-          <div id="ALHZY" class="home-alhzy">
-            <div class="home-content12">
-              <main class="home-main3">
-                <h2 class="home-heading12">
-                  Accuracy Meets Innovation in Alzheimer’s Prediction
-                </h2>
-                <p class="home-paragraph2">
-                  <span>
-                    Introducing ALHZY, an online platform that detects
-                    Alzheimer’s Disease with 99.7% accuracy. Leveraging the
-                    EfficientNetB3 model, this project achieves high performance
-                    while reducing computational complexity by 20% compared to
-                    industry standards like VGG-16. Trained on a diverse dataset
-                    of 5,000+ medical images, it offers unmatched precision and
-                    reliability in Alzheimer’s detection.
-                  </span>
-                  <br />
-                </p>
-              </main>
-              <a
-                href="https://github.com/ceazyy/ALHZY"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="home-link24"
-              >
-                <div class="home-explore-more2">
-                  <p class="home-text32">Explore more -&gt;</p>
-                </div>
-              </a>
-            </div>
-            <div class="home-image5">
-              <img
-                alt="image"
-                src="public/SectionImages/image_2025-01-22_200025763-500h.png"
-                class="home-image6"
-              />
-            </div>
+          <div class="home-nav-links2">
+            <span class="nav-link">Features</span>
+            <span class="nav-link">Why us</span>
+            <span class="nav-link">Prices</span>
+            <span class="nav-link">Contact</span>
           </div>
-          <div id="DIA" class="home-dia">
-            <div class="home-content13">
-              <main class="home-main4">
-                <h2 class="home-heading13">
-                  Advanced Eye Health Diagnosis with CNN Models
-                </h2>
-                <p class="home-paragraph3">
-                  <span>
-                    Tackle diabetic retinopathy with a state-of-the-art
-                    Convolutional Neural Network (CNN) that achieves an
-                    impressive accuracy of 93.45%. Trained on 2,562 retinal
-                    images and validated on 550 images, this model identifies
-                    early signs of retinopathy with precision. By combining
-                    TensorFlow and deep learning techniques, this project
-                    advances eye health diagnostics to deliver impactful
-                    solutions.
-                  </span>
-                  <br />
-                </p>
-              </main>
-              <a
-                href="https://drive.google.com/file/d/1J1QVaYbhX-nTH3ctUxA7cF-oEQ3I-llt/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                class="home-link25"
-              >
-                <div class="home-explore-more3">
-                  <p class="home-text35">Explore more -&gt;</p>
-                </div>
-              </a>
-            </div>
-            <div class="home-image7">
-              <img
-                alt="image"
-                src="public/SectionImages/image_2025-01-22_200349420-500h.png"
-                class="home-image8"
-              />
-            </div>
+          <div class="get-started">
+            <span class="home-text13">Get started</span>
           </div>
-        </section>
-        <section id="Deserve" class="home-section12">
-          <header class="home-header2">
-            <h2 class="home-text36">Why you should Hire Me?</h2>
-            <span class="home-text37">Let me break it down for you:</span>
-          </header>
-          <section class="home-note1">
-            <div class="home-content14">
-              <div class="home-main5">
-                <div class="home-caption2">
-                  <span class="section-head">Tech-Savvy Creator</span>
-                </div>
-                <div class="home-heading14">
-                  <h2 class="section-heading">
-                    I design and build smart solutions
-                  </h2>
-                  <p class="section-description">
-                    I’ve built cool stuff like a GUI to manage 100+ AVs and an
-                    AI model with 99.7% accuracy in Alzheimer’s detection. I’m
-                    into Generative AI, Python, and TensorFlow—basically, I know
-                    how to get things done with the latest tech.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="home-note2">
-            <div class="home-content15">
-              <main class="home-main6">
-                <header class="home-caption3">
-                  <span class="home-section14 section-head">
-                    Team Player with Results
-                  </span>
-                </header>
-                <main class="home-heading16">
-                  <header class="home-header3">
-                    <h2 class="section-heading">I thrive on teamwork</h2>
-                    <p class="section-description">
-                      Whether it’s crunching 10,000+ lines of data or
-                      fine-tuning AI models, I make things work while keeping it
-                      collaborative. I’m all about solving problems and bringing
-                      fresh ideas to the table.
-                    </p>
-                  </header>
-                </main>
-              </main>
-            </div>
-          </section>
-        </section>
-        <section id="Experience" class="home-section15">
-          <header class="home-header4">
-            <h2 class="home-text38">What’s my story so far?</h2>
-          </header>
-          <section class="home-note3">
-            <div class="home-content16">
-              <div class="home-main7">
-                <div class="home-caption4">
-                  <a
-                    href="https://www.cdac.in/index.aspx?id=ND"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="home-section16 section-head"
-                  >
-                    C-DAC NOida
-                  </a>
-                </div>
-                <div class="home-heading18">
-                  <h2 class="section-heading">
-                    <span>Cyber-Security Intern</span>
-                    <br />
-                  </h2>
-                  <p class="section-description">
-                    I interned under the Cyber-Security department of C-DAC
-                    Noida, and I was able to learn new skills like Bash
-                    programming, which I'm still a novice at and now I know how
-                    to operate a Kali Linux OS and use WireShark to&nbsp;capture
-                    and display real-time details of network traffic.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="home-note4">
-            <div class="home-content17">
-              <main class="home-main8">
-                <header class="home-caption5">
-                  <a
-                    href="https://bel-india.in"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    class="home-section17 section-head"
-                  >
-                    Bharat Electronics Limited
-                  </a>
-                </header>
-                <main class="home-heading20">
-                  <header class="home-header5">
-                    <h2 class="section-heading">Research Intern</h2>
-                    <p class="section-description">
-                      I crunched through 10,000+ lines of Air Force data with
-                      NumPy, Pandas, and Seaborn to uncover key trends. Built a
-                      sleek, custom GUI from scratch to monitor and manage 100+
-                      autonomous vehicles, making sure nothing goes rogue.
-                      Feature engineered 10+ research papers to cook up a fresh
-                      method for training ANNs, leveling up neural network
-                      performance overall. And to top it off, I used deep
-                      learning magic (ANNs and Decision Trees) to spot and
-                      classify hazards, hitting 98% accuracy—basically, I made
-                      the machines smarter.
-                    </p>
-                  </header>
-                </main>
-              </main>
-            </div>
-          </section>
-        </section>
-        <section id="Skills" class="home-section18">
-          <div class="home-note5">
-            <div class="home-content18">
-              <div class="home-caption6">
-                <span class="home-section19 section-head">SKILLS</span>
-              </div>
-              <div class="home-heading22">
-                <div class="home-header6">
-                  <h2 class="section-heading home-heading23">
-                    What I bring to the table?
-                  </h2>
-                </div>
-                <accordion-wrapper
-                  class="accordion-wrapper"
-                  rootclassname="accordionundefined"
-                >
-                  <!--Accordion component-->
-                  <div class="accordion-accordion accordionroot-class-name">
-                    <div
-                      data-role="accordion-container"
-                      class="accordion-element1 accordion-element"
-                    >
-                      <div class="accordion-details1">
-                        <span class="accordion-text1">
-                          <span>Technologies:</span>
-                        </span>
-                        <span
-                          data-role="accordion-content"
-                          class="accordion-text2"
-                        >
-                          <span>
-                            Generative AI, Large Language Models, Machine
-                            Learning, Artificial Intelligence
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      data-role="accordion-container"
-                      class="accordion-element2 accordion-element"
-                    >
-                      <div class="accordion-details2">
-                        <span class="accordion-text3">
-                          <span>Programming Languages:</span>
-                        </span>
-                        <span
-                          data-role="accordion-content"
-                          class="accordion-text4"
-                        >
-                          <span>C++, SQL, HTML, CSS, Python</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      data-role="accordion-container"
-                      class="accordion-element3 accordion-element"
-                    >
-                      <div class="accordion-details3">
-                        <span class="accordion-text5">
-                          <span>Frameworks and Tools:</span>
-                        </span>
-                        <span
-                          data-role="accordion-content"
-                          class="accordion-text6"
-                        >
-                          <fragment class="home-fragment">
-                            <span class="home-text41">
-                              <span>
-                                TensorFlow, Flask, Streamlit, NumPy, Pandas
-                              </span>
-                              <br />
-                              <span>
-                                MS Office Suite, SQLite, Qt 5, Salesforce
-                              </span>
-                            </span>
-                          </fragment>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </accordion-wrapper>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="FAQ" class="home-section20">
-          <header class="home-header7">
-            <span class="section-head">FAQ</span>
-            <h2 class="home-heading24 section-heading">
-              Frequently asked questions
-            </h2>
-          </header>
-          <main class="home-accordion">
-            <faq-wrapper class="faq-wrapper" rootclassname="fa-qundefined">
-              <!--FAQ component-->
-              <div class="faq-accordion fa-qroot-class-name">
-                <div
-                  data-role="accordion-container"
-                  class="faq-element1 accordion-element"
-                >
-                  <div class="faq-details1">
-                    <span class="faq-text10">Who are you?</span>
-                    <span data-role="accordion-content" class="faq-text11">
-                      I’m Nipun Chandra, a B.Tech graduate specializing in AI,
-                      with a passion for creating innovative tech solutions. My
-                      expertise lies in Generative AI, Machine Learning, Python
-                      and C++.
-                    </span>
-                  </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  class="faq-element2 accordion-element"
-                >
-                  <div class="faq-details2">
-                    <span class="faq-text12">What inspires your work?</span>
-                    <span data-role="accordion-content" class="faq-text13">
-                      I love solving real-world problems using technology and
-                      AI. The sense of helping people out in my own way inspires
-                      me the most and motivates me to keep going.&nbsp;
-                    </span>
-                  </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  class="faq-element3 accordion-element"
-                >
-                  <div class="faq-details3">
-                    <span class="faq-text14">
-                      What are your key technical skills?
-                    </span>
-                    <span data-role="accordion-content" class="faq-text15">
-                      I specialize in Generative AI, LLM, RAG, Python, C++ and
-                      SQL. I also have experience in frameworks like NumPy,
-                      Pandas, and tools such as Qt 5, PostgreSQL and Salesforce.
-                    </span>
-                  </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  class="faq-element4 accordion-element"
-                >
-                  <div class="faq-details4">
-                    <span class="faq-text16">
-                      What makes you unique as a developer?
-                    </span>
-                    <span data-role="accordion-content" class="faq-text17">
-                      <span>
-                        My ability to combine technical expertise with
-                        creativity sets me apart. From building AI models with
-                        99.7% accuracy to designing user-friendly interfaces, I
-                        focus on both innovation and execution.
-                      </span>
-                      <br />
-                      <br />
-                    </span>
-                  </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  class="faq-element5 accordion-element"
-                >
-                  <div class="faq-details5">
-                    <span class="faq-text22">How can I contact you?</span>
-                    <span data-role="accordion-content" class="faq-text23">
-                      <span>You can reach me at</span>
-                      <a
-                        href="mailto:nipunchandra2002@gmail.com?subject="
-                        class="faq-link1"
-                      >
-                        Gmail
-                      </a>
-                      <span>or connect with me on</span>
-                      <a
-                        href="https://www.linkedin.com/in/nipun-chandra-24ba15143/"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        class="faq-link2"
-                      >
-                        LinkedIn
-                      </a>
-                      <span>.</span>
-                    </span>
-                  </div>
-                </div>
-                <div
-                  data-role="accordion-container"
-                  class="faq-element6 accordion-element"
-                >
-                  <div class="faq-details6">
-                    <span class="faq-text27">
-                      Are you open to collaboration?
-                    </span>
-                    <span data-role="accordion-content" class="faq-text28">
-                      Yes! I’m always looking for opportunities to collaborate
-                      on projects that push the boundaries of technology and
-                      help me grow as an Engineer and a human being.&nbsp;
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </faq-wrapper>
-          </main>
-        </section>
-        <footer class="home-footer">
-          <div class="home-content19">
-            <main class="home-main-content">
-              <section class="home-copyright1">
-                <span class="home-text46">
-                  © 2024 Nipun Chandra. All Rights Reserved.
-                </span>
-              </section>
-            </main>
-            <main class="home-subscribe"></main>
-            <section class="home-copyright2">
-              <span class="home-text47">
-                © 2022 latitude. All Rights Reserved.
-              </span>
-            </section>
-          </div>
-        </footer>
+        </div>
         <div>
-          <div class="home-container6">
-            <script>
-                  /*
-              Accordion - Code Embed
-              */
+          <div class="home-container4">
+            <script defer="">
+              /*
+          Mobile menu - Code Embed
+          */
 
-              /* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
-              the Accordions will still work*/
+              /* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app,
+              the mobile menu will still work*/
 
-              const listenForUrlChangesAccordion = () => {
-                    let url = location.href;
-                    document.body.addEventListener(
-                      'click',
-                      () => {
-                        requestAnimationFrame(() => {
-                          if (url !== location.href) {
-                            runAccordionCodeEmbed();
-                            url = location.href;
-                          }
-                        });
-                      },
-                      true
-                    );
-                  };
-
-
-              const runAccordionCodeEmbed = () => {
-                  const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
-                  const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
-                  const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
-
-                  accordionContents.forEach((accordionContent) => {
-                      accordionContent.style.display = 'none'; //Hides all accordion contents
+              const listenForUrlChangesMobileMenu = () => {
+                let url = location.href;
+                document.body.addEventListener('click', () => {
+                  requestAnimationFrame(() => {
+                    if (url !== location.href) {
+                      runMobileMenuCodeEmbed();
+                      url = location.href;
+                    }
                   });
+                },
+                  true
+                );
+              };
 
-                  accordionContainers.forEach((accordionContainer, index) => {
-                      accordionContainer.addEventListener('click', () => {
-                          accordionContents.forEach((accordionContent) => {
-                          accordionContent.style.display = 'none'; //Hides all accordion contents
-                          });
+              const runMobileMenuCodeEmbed = () => {
+                // Mobile menu
+                const mobileMenu = document.querySelector('#mobile-menu')
 
-                          accordionIcons.forEach((accordionIcon) => {
-                              accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
-                          });
+                // Buttons
+                const closeButton = document.querySelector('#close-mobile-menu')
+                const openButton = document.querySelector('#open-mobile-menu')
 
-                          accordionContents[index].style.display = 'flex'; // Shows accordion content
-                          accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
-                      });
-                  });
+                // On openButton click, set the mobileMenu position left to -100vw
+                openButton && openButton.addEventListener('click', function () {
+                  mobileMenu.style.transform = 'translateX(0%)'
+                })
+
+                // On closeButton click, set the mobileMenu position to 0vw
+                closeButton && closeButton.addEventListener('click', function () {
+                  mobileMenu.style.transform = 'translateX(100%)'
+                })
               }
 
-              runAccordionCodeEmbed()
-              listenForUrlChangesAccordion()
-
-              /*
-              Here's what the above is doing:
-                  1. Selects all accordion containers, contents, and icons
-                  2. Hides all accordion contents
-                  3. Adds an event listener to each accordion container
-                  4. When an accordion container is clicked, it:
-                      - Hides all accordion contents
-                      - Resets all icon transforms to 0deg (default)
-                      - Checks if this container has class 'accordion-open'
-                          - If it does, it removes class 'accordion-open'
-                          - If it doesn't, it:
-                              - Removes class 'accordion-open' from all containers
-                              - Adds class 'accordion-open' to this container
-                              - Shows accordion content
-                              - Rotates accordion icon 180deg
-              */
+              runMobileMenuCodeEmbed()
+              listenForUrlChangesMobileMenu()
             </script>
           </div>
         </div>
+      </header>
+      <section id="Home" class="home-section10">
+        <div class="home-hero">
+          <div class="home-content10">
+            <main class="home-main1">
+              <header class="home-header1">
+                <h1 class="home-heading10">Hi, I'm Nipun Chandra</h1>
+                <span class="home-caption1">
+                  Machine Learning and Artificial Intelligence Enthusiast
+                  graduated from Netaji Subhas University of Technology
+                  (Delhi) in 2024 with a Degree of Bachelors of Technology in
+                  Computer Science and Engineering with a specialization in
+                  Artificial Intelligence.
+                </span>
+              </header>
+              <div class="home-buttons">
+                <a href="https://www.linkedin.com/in/nipun-chandra-24ba15143/" target="_blank" rel="noreferrer noopener"
+                  class="home-link19">
+                  <div class="home-linked-in button">
+                    <span class="home-text14">LinkedIn</span>
+                  </div>
+                </a>
+                <a href="https://github.com/ceazyy" target="_blank" rel="noreferrer noopener" class="home-link20">
+                  <div class="home-git-hub button">
+                    <span class="home-text15">GitHub</span>
+                  </div>
+                </a>
+              </div>
+            </main>
+          </div>
+        </div>
+      </section>
+      <section id="Projects" class="home-section11">
+        <h2 class="home-text16">
+          <span>My Projects</span>
+          <br />
+        </h2>
+        <div class="home-features">
+          <a href="#GENAI" class="home-link21">
+            <header class="home-feature1 feature feature-active">
+              <h3 class="home-text19">Next Gen Agent</h3>
+              <p class="home-text20">
+                GPT-3.5 turbo, LLM, API, Python, Flask
+              </p>
+            </header>
+          </a>
+          <a href="#ALHZY" class="home-link22">
+            <header class="home-feature2 feature feature-active">
+              <h3 class="home-text21">Alzheimer's Detection</h3>
+              <p class="home-text22">
+                Alzheimer's, Python, Tensorflow, EfficientNet
+              </p>
+            </header>
+          </a>
+          <a href="#DIA" class="home-link23">
+            <header class="home-feature3 feature feature-active">
+              <h3 class="home-text23">
+                <span class="home-text24">
+                  Diabetic Retinopathy Detection
+                </span>
+                <br />
+              </h3>
+              <p class="home-text26">
+                Diabetic Retinopathy, Tensorflow, Deep Learning
+              </p>
+            </header>
+          </a>
+        </div>
+        <div id="GENAI" class="home-gen-ai">
+          <div class="home-content11">
+            <main class="home-main2">
+              <h2 class="home-heading11">
+                Revolutionizing Case Management with GenAI and LLMs
+              </h2>
+              <p class="home-paragraph1">
+                <span>
+                  Manage cases with the NextGen Agent, a solution powered by
+                  GPT-3.5-turbo. This platform integrates five core modules to
+                  deliver automated insights, streamlining customer service
+                  operations and eliminating repetitive manual tasks. With a
+                  sleek Flask-based UI and robust database management using
+                  PostgreSQL, this agent takes case management to the next
+                  level. The AI-driven insights feature ensures efficiency by
+                  automating case updates and delivering structured responses.
+                </span>
+                <br />
+              </p>
+            </main>
+            <div class="home-explore-more1">
+              <p class="home-text29">Explore more -&gt;</p>
+            </div>
+          </div>
+          <div class="home-image3">
+            <img alt="image" src="public/SectionImages/image_2025-01-22_191206682-500h.png" class="home-image4" />
+          </div>
+        </div>
+        <div id="ALHZY" class="home-alhzy">
+          <div class="home-content12">
+            <main class="home-main3">
+              <h2 class="home-heading12">
+                Accuracy Meets Innovation in Alzheimer's Prediction
+              </h2>
+              <p class="home-paragraph2">
+                <span>
+                  Introducing ALHZY, an online platform that detects
+                  Alzheimer's Disease with 99.7% accuracy. Leveraging the
+                  EfficientNetB3 model, this project achieves high performance
+                  while reducing computational complexity by 20% compared to
+                  industry standards like VGG-16. Trained on a diverse dataset
+                  of 5,000+ medical images, it offers unmatched precision and
+                  reliability in Alzheimer's detection.
+                </span>
+                <br />
+              </p>
+            </main>
+            <a href="https://github.com/ceazyy/ALHZY" target="_blank" rel="noreferrer noopener" class="home-link24">
+              <div class="home-explore-more2">
+                <p class="home-text32">Explore more -&gt;</p>
+              </div>
+            </a>
+          </div>
+          <div class="home-image5">
+            <img alt="image" src="public/SectionImages/image_2025-01-22_200025763-500h.png" class="home-image6" />
+          </div>
+        </div>
+        <div id="DIA" class="home-dia">
+          <div class="home-content13">
+            <main class="home-main4">
+              <h2 class="home-heading13">
+                Advanced Eye Health Diagnosis with CNN Models
+              </h2>
+              <p class="home-paragraph3">
+                <span>
+                  Tackle diabetic retinopathy with a state-of-the-art
+                  Convolutional Neural Network (CNN) that achieves an
+                  impressive accuracy of 93.45%. Trained on 2,562 retinal
+                  images and validated on 550 images, this model identifies
+                  early signs of retinopathy with precision. By combining
+                  TensorFlow and deep learning techniques, this project
+                  advances eye health diagnostics to deliver impactful
+                  solutions.
+                </span>
+                <br />
+              </p>
+            </main>
+            <a href="https://drive.google.com/file/d/1J1QVaYbhX-nTH3ctUxA7cF-oEQ3I-llt/view?usp=sharing" target="_blank"
+              rel="noreferrer noopener" class="home-link25">
+              <div class="home-explore-more3">
+                <p class="home-text35">Explore more -&gt;</p>
+              </div>
+            </a>
+          </div>
+          <div class="home-image7">
+            <img alt="image" src="public/SectionImages/image_2025-01-22_200349420-500h.png" class="home-image8" />
+          </div>
+        </div>
+      </section>
+      <section id="Deserve" class="home-section12">
+        <header class="home-header2">
+          <h2 class="home-text36">Why you should Hire Me?</h2>
+          <span class="home-text37">Let me break it down for you:</span>
+        </header>
+        <section class="home-note1">
+          <div class="home-content14">
+            <div class="home-main5">
+              <div class="home-caption2">
+                <span class="section-head">Tech-Savvy Creator</span>
+              </div>
+              <div class="home-heading14">
+                <h2 class="section-heading">
+                  I design and build smart solutions
+                </h2>
+                <p class="section-description">
+                  I've built cool stuff like a GUI to manage 100+ AVs and an
+                  AI model with 99.7% accuracy in Alzheimer's detection. I'm
+                  into Generative AI, Python, and TensorFlow—basically, I know
+                  how to get things done with the latest tech.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-note2">
+          <div class="home-content15">
+            <main class="home-main6">
+              <header class="home-caption3">
+                <span class="home-section14 section-head">
+                  Team Player with Results
+                </span>
+              </header>
+              <main class="home-heading16">
+                <header class="home-header3">
+                  <h2 class="section-heading">I thrive on teamwork</h2>
+                  <p class="section-description">
+                    Whether it's crunching 10,000+ lines of data or
+                    fine-tuning AI models, I make things work while keeping it
+                    collaborative. I'm all about solving problems and bringing
+                    fresh ideas to the table.
+                  </p>
+                </header>
+              </main>
+            </main>
+          </div>
+        </section>
+        <section class="home-note3">
+          <div class="home-content16">
+            <main class="home-main7">
+              <header class="home-caption4">
+                <span class="home-section15 section-head">
+                  Community Builder & Leader
+                </span>
+              </header>
+              <main class="home-heading18">
+                <header class="home-header4">
+                  <h2 class="section-heading">I build and lead communities</h2>
+                  <p class="section-description">
+                    Co-founded a social media management firm, leading a community of 1k+ people and serving 30+ happy
+                    customers from influencers to content creators. This experience has honed my ability to understand
+                    diverse needs and deliver results that matter.
+                  </p>
+                </header>
+              </main>
+            </main>
+          </div>
+        </section>
+      </section>
+      <section id="Experience" class="home-section15">
+        <header class="home-header4">
+          <h2 class="home-text38">What's my story so far?</h2>
+        </header>
+        <section class="home-note3">
+          <div class="home-content16">
+            <main class="home-main7">
+              <header class="home-caption4">
+                <a href="https://kds.co.in" target="_blank" rel="noreferrer noopener"
+                  class="home-section16 section-head">
+                  KDS Services Private Limited
+                </a>
+              </header>
+              <div class="home-heading18">
+                <h2 class="section-heading">
+                  <span>Executive, Marketing</span>
+                  <br />
+                </h2>
+                <p class="section-description">
+                  Built a web scraping pipeline to automate tender discovery, cutting manual effort by 50%.
+                  Integrated LLM-powered document generation, reducing proposal drafting time by 60%.
+                  Developed Python and SQL-based bid tracking tools, improving success rate evaluation.
+                  Registered vendor for Bharat Electronics Limited, boosting high-value tender wins by 20%.
+                </p>
+              </div>
+            </main>
+          </div>
+        </section>
+        <section class="home-note4">
+          <div class="home-content17">
+            <main class="home-main8">
+              <header class="home-caption5">
+                <a href="https://www.cdac.in" target="_blank" rel="noreferrer noopener"
+                  class="home-section17 section-head">
+                  Centre for Development of Advanced Computing
+                </a>
+              </header>
+              <main class="home-heading20">
+                <header class="home-header5">
+                  <h2 class="section-heading">Intern, Cyber Security</h2>
+                  <p class="section-description">
+                    Conducted penetration testing and network security analysis using Wireshark and Kali Linux.
+                    Optimized RDP and VPN setups, improving remote connectivity by 30%.
+                    Researched identity theft and phishing, contributing to improved threat detection.
+                  </p>
+                </header>
+              </main>
+            </main>
+          </div>
+        </section>
+        <section class="home-note5">
+          <div class="home-content18">
+            <main class="home-main9">
+              <header class="home-caption6">
+                <a href="https://discord.com" target="_blank" rel="noreferrer noopener"
+                  class="home-section18 section-head">
+                  Discord Nation Alpha
+                </a>
+              </header>
+              <main class="home-heading22">
+                <header class="home-header6">
+                  <h2 class="section-heading">Bot Development, Co-Founder</h2>
+                  <p class="section-description">
+                    Created automated moderation bots and managed 100+ Discord communities.
+                    Designed and secured servers for 30+ clients, integrating custom bots and APIs.
+                    Improved social media engagement by 60% using data-driven strategies.
+                  </p>
+                </header>
+              </main>
+            </main>
+          </div>
+        </section>
+        <section class="home-note6">
+          <div class="home-content19">
+            <main class="home-main10">
+              <header class="home-caption7">
+                <a href="https://bel-india.in" target="_blank" rel="noreferrer noopener"
+                  class="home-section19 section-head">
+                  Bharat Electronics Limited
+                </a>
+              </header>
+              <main class="home-heading24">
+                <header class="home-header7">
+                  <h2 class="section-heading">Research Intern</h2>
+                  <p class="section-description">
+                    I crunched through 10,000+ lines of Air Force data with
+                    NumPy, Pandas, and Seaborn to uncover key trends. Built a
+                    sleek, custom GUI from scratch to monitor and manage 100+
+                    autonomous vehicles, making sure nothing goes rogue.
+                    Feature engineered 10+ research papers to cook up a fresh
+                    method for training ANNs, leveling up neural network
+                    performance overall. And to top it off, I used deep
+                    learning magic (ANNs and Decision Trees) to spot and
+                    classify hazards, hitting 98% accuracy—basically, I made
+                    the machines smarter.
+                  </p>
+                </header>
+              </main>
+            </main>
+          </div>
+        </section>
+      </section>
+      <section id="Skills" class="home-section18">
+        <div class="home-note5">
+          <div class="home-content18">
+            <div class="home-caption6">
+              <span class="home-section19 section-head">SKILLS</span>
+            </div>
+            <div class="home-heading22">
+              <div class="home-header6">
+                <h2 class="section-heading home-heading23">
+                  What I bring to the table?
+                </h2>
+              </div>
+              <accordion-wrapper class="accordion-wrapper" rootclassname="accordionundefined">
+                <!--Accordion component-->
+                <div class="accordion-accordion accordionroot-class-name">
+                  <div data-role="accordion-container" class="accordion-element1 accordion-element">
+                    <div class="accordion-details1">
+                      <span class="accordion-text1">
+                        <span>Technologies:</span>
+                      </span>
+                      <span data-role="accordion-content" class="accordion-text2">
+                        <span>
+                          Generative AI, Large Language Models, Machine
+                          Learning, Artificial Intelligence
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div data-role="accordion-container" class="accordion-element2 accordion-element">
+                    <div class="accordion-details2">
+                      <span class="accordion-text3">
+                        <span>Programming Languages:</span>
+                      </span>
+                      <span data-role="accordion-content" class="accordion-text4">
+                        <span>C++, SQL, HTML, CSS, Python</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div data-role="accordion-container" class="accordion-element3 accordion-element">
+                    <div class="accordion-details3">
+                      <span class="accordion-text5">
+                        <span>Frameworks and Tools:</span>
+                      </span>
+                      <span data-role="accordion-content" class="accordion-text6">
+                        <fragment class="home-fragment">
+                          <span class="home-text41">
+                            <span>
+                              TensorFlow, Flask, Streamlit, NumPy, Pandas
+                            </span>
+                            <br />
+                            <span>
+                              MS Office Suite, SQLite, Qt 5, Salesforce
+                            </span>
+                          </span>
+                        </fragment>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </accordion-wrapper>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="FAQ" class="home-section20">
+        <header class="home-header7">
+          <span class="section-head">FAQ</span>
+          <h2 class="home-heading24 section-heading">
+            Frequently asked questions
+          </h2>
+        </header>
+        <main class="home-accordion">
+          <faq-wrapper class="faq-wrapper" rootclassname="fa-qundefined">
+            <!--FAQ component-->
+            <div class="faq-accordion fa-qroot-class-name">
+              <div data-role="accordion-container" class="faq-element1 accordion-element">
+                <div class="faq-details1">
+                  <span class="faq-text10">Who are you?</span>
+                  <span data-role="accordion-content" class="faq-text11">
+                    I'm Nipun Chandra, a B.Tech graduate specializing in AI,
+                    with a passion for creating innovative tech solutions. My
+                    expertise lies in Generative AI, Machine Learning, Python
+                    and C++.
+                  </span>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="faq-element2 accordion-element">
+                <div class="faq-details2">
+                  <span class="faq-text12">What inspires your work?</span>
+                  <span data-role="accordion-content" class="faq-text13">
+                    I love solving real-world problems using technology and
+                    AI. The sense of helping people out in my own way inspires
+                    me the most and motivates me to keep going.&nbsp;
+                  </span>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="faq-element3 accordion-element">
+                <div class="faq-details3">
+                  <span class="faq-text14">
+                    What are your key technical skills?
+                  </span>
+                  <span data-role="accordion-content" class="faq-text15">
+                    I specialize in Generative AI, LLM, RAG, Python, C++ and
+                    SQL. I also have experience in frameworks like NumPy,
+                    Pandas, and tools such as Qt 5, PostgreSQL and Salesforce.
+                  </span>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="faq-element4 accordion-element">
+                <div class="faq-details4">
+                  <span class="faq-text16">
+                    What makes you unique as a developer?
+                  </span>
+                  <span data-role="accordion-content" class="faq-text17">
+                    <span>
+                      My ability to combine technical expertise with
+                      creativity sets me apart. From building AI models with
+                      99.7% accuracy to designing user-friendly interfaces, I
+                      focus on both innovation and execution.
+                    </span>
+                    <br />
+                    <br />
+                  </span>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="faq-element5 accordion-element">
+                <div class="faq-details5">
+                  <span class="faq-text22">How can I contact you?</span>
+                  <span data-role="accordion-content" class="faq-text23">
+                    <span>You can reach me at</span>
+                    <a href="mailto:nipunchandra2002@gmail.com?subject=" class="faq-link1">
+                      Gmail
+                    </a>
+                    <span>or connect with me on</span>
+                    <a href="https://www.linkedin.com/in/nipun-chandra-24ba15143/" target="_blank"
+                      rel="noreferrer noopener" class="faq-link2">
+                      LinkedIn
+                    </a>
+                    <span>.</span>
+                  </span>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="faq-element6 accordion-element">
+                <div class="faq-details6">
+                  <span class="faq-text27">
+                    Are you open to collaboration?
+                  </span>
+                  <span data-role="accordion-content" class="faq-text28">
+                    Yes! I'm always looking for opportunities to collaborate
+                    on projects that push the boundaries of technology and
+                    help me grow as an Engineer and a human being.&nbsp;
+                  </span>
+                </div>
+              </div>
+            </div>
+          </faq-wrapper>
+        </main>
+      </section>
+      <footer class="home-footer">
+        <div class="home-content19">
+          <main class="home-main-content">
+            <section class="home-copyright1">
+              <span class="home-text46">
+                © 2024 Nipun Chandra. All Rights Reserved.
+              </span>
+            </section>
+          </main>
+          <main class="home-subscribe"></main>
+          <section class="home-copyright2">
+            <span class="home-text47">
+              © 2022 latitude. All Rights Reserved.
+            </span>
+          </section>
+        </div>
+      </footer>
+      <div>
+        <div class="home-container6">
+          <script>
+            /*
+        Accordion - Code Embed
+        */
+
+            /* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
+            the Accordions will still work*/
+
+            const listenForUrlChangesAccordion = () => {
+              let url = location.href;
+              document.body.addEventListener(
+                'click',
+                () => {
+                  requestAnimationFrame(() => {
+                    if (url !== location.href) {
+                      runAccordionCodeEmbed();
+                      url = location.href;
+                    }
+                  });
+                },
+                true
+              );
+            };
+
+
+            const runAccordionCodeEmbed = () => {
+              const accordionContainers = document.querySelectorAll("[data-role='accordion-container']"); // All accordion containers
+              const accordionContents = document.querySelectorAll("[data-role='accordion-content']"); // All accordion content
+              const accordionIcons = document.querySelectorAll("[data-role='accordion-icon']"); // All accordion icons
+
+              accordionContents.forEach((accordionContent) => {
+                accordionContent.style.display = 'none'; //Hides all accordion contents
+              });
+
+              accordionContainers.forEach((accordionContainer, index) => {
+                accordionContainer.addEventListener('click', () => {
+                  accordionContents.forEach((accordionContent) => {
+                    accordionContent.style.display = 'none'; //Hides all accordion contents
+                  });
+
+                  accordionIcons.forEach((accordionIcon) => {
+                    accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
+                  });
+
+                  accordionContents[index].style.display = 'flex'; // Shows accordion content
+                  accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+                });
+              });
+            }
+
+            runAccordionCodeEmbed()
+            listenForUrlChangesAccordion()
+
+            /*
+            Here's what the above is doing:
+                1. Selects all accordion containers, contents, and icons
+                2. Hides all accordion contents
+                3. Adds an event listener to each accordion container
+                4. When an accordion container is clicked, it:
+                    - Hides all accordion contents
+                    - Resets all icon transforms to 0deg (default)
+                    - Checks if this container has class 'accordion-open'
+                        - If it does, it removes class 'accordion-open'
+                        - If it doesn't, it:
+                            - Removes class 'accordion-open' from all containers
+                            - Adds class 'accordion-open' to this container
+                            - Shows accordion content
+                            - Rotates accordion icon 180deg
+            */
+          </script>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
