@@ -467,16 +467,14 @@
                   Community Builder & Leader
                 </span>
               </header>
-              <main class="home-heading18">
-                <header class="home-header4">
-                  <h2 class="section-heading">I build and lead communities</h2>
-                  <p class="section-description">
-                    Co-founded a social media management firm, leading a community of 1k+ people and serving 30+ happy
-                    customers from influencers to content creators. This experience has honed my ability to understand
-                    diverse needs and deliver results that matter.
-                  </p>
-                </header>
-              </main>
+              <div class="home-heading18">
+                <h2 class="section-heading">I build and lead communities</h2>
+                <p class="section-description">
+                  Co-founded a social media management firm, leading a community of 1k+ people and serving 30+ happy
+                  customers from influencers to content creators. This experience has honed my ability to understand
+                  diverse needs and deliver results that matter.
+                </p>
+              </div>
             </main>
           </div>
         </section>
@@ -782,26 +780,25 @@
 
 
             const runAccordionCodeEmbed = () => {
-              const accordionContainers = document.querySelectorAll("[data-role='accordion-container']"); // All accordion containers
-              const accordionContents = document.querySelectorAll("[data-role='accordion-content']"); // All accordion content
-              const accordionIcons = document.querySelectorAll("[data-role='accordion-icon']"); // All accordion icons
-
-              accordionContents.forEach((accordionContent) => {
-                accordionContent.style.display = 'none'; //Hides all accordion contents
-              });
+              const accordionContainers = document.querySelectorAll("[data-role='accordion-container']");
+              const accordionContents = document.querySelectorAll("[data-role='accordion-content']");
+              const accordionIcons = document.querySelectorAll("[data-role='accordion-icon']");
 
               accordionContainers.forEach((accordionContainer, index) => {
                 accordionContainer.addEventListener('click', () => {
-                  accordionContents.forEach((accordionContent) => {
-                    accordionContent.style.display = 'none'; //Hides all accordion contents
+                  const isOpen = accordionContainer.getAttribute('open') === 'true';
+                  
+                  // Close all other accordions
+                  accordionContainers.forEach((container, i) => {
+                    if (i !== index) {
+                      container.setAttribute('open', 'false');
+                      accordionIcons[i].style.transform = 'rotate(0deg)';
+                    }
                   });
 
-                  accordionIcons.forEach((accordionIcon) => {
-                    accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
-                  });
-
-                  accordionContents[index].style.display = 'flex'; // Shows accordion content
-                  accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+                  // Toggle current accordion
+                  accordionContainer.setAttribute('open', !isOpen);
+                  accordionIcons[index].style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
                 });
               });
             }
